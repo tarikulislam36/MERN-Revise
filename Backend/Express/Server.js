@@ -4,7 +4,7 @@ let server = app();
 let StaticPath = path.join(__dirname, 'public');
 
 
-server.use(app.static(StaticPath));
+server.use(app.static(StaticPath)); // Statics middleware for serving static files
 
 server.get('/', (req, res) => {
     res.sendFile(path.join(StaticPath));
